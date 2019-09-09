@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster();
+        });
+    </script>
+    <script type="text/javascript" src="js/myjavascript.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1 class="glow"> The earth's atmosphere </h1>
+
+        </div>
+        <div>
+            <ul id="menu">
+                <a class="menu-button icon-plus" href="#menu" title="Show navigation"> <img class="sun" src='images/sun.png'>
+                </a>
+                <a class="menu-button icon-minus" href="#0" title="Hide navigation"> <img class="sun" src='images/sun.png'></a>
+                <li class="menu-item">
+                    <a href="#menu">
+                        <span class="fa fa-github">1</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#menu">
+                        <span>2</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#menu">
+                        <span class="fa fa-instagram">3</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#menu">
+                        <span class="fa fa-twitter">4</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#menu">
+                        <span class="fa fa-twitter">5</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </header>
+
+    <div class="container">
+        <div class="emptyLayer">
+
+        </div>
+        <div id="exosphere" class="exosphere">
+            <h2 id="exosphereHeading">Exosphere</h2>
+            <img class="tooltip starsIcon " title="Stars" src="images/stars.png">
+            <div class="exoWrap">
+                <div class="exosphereSky" id="exosphereSky">
+
+
+                </div>
+            </div>
+        </div>
+        <div id="thermosphere" class="thermosphere">
+            <h2 id="thermosphereHeading">Thermosphere</h2>
+            <img class="tooltip comet" title="Satellite" src="images/satellite.png">
+
+        </div>
+        <div id="mesosphere" class="mesosphere">
+            <h2 id="mesosphereHeading">Mesosphere</h2>
+            <img class="tooltip comet" title="Comet" src="images/comet.png">
+            <div id="mesosphereSky" class="mesosphereSky">
+                <div class="parContainer">
+                    <p class="mesosphereParagraph">
+                        The mesosphere lies between the thermosphere and the stratosphere. “Meso” means middle, and this is the highest layer of the atmosphere in which the gases are all mixed up rather than being layered by their mass. The mesosphere is 22 miles (35 kilometers)
+                        thick. The air is still thin, so you wouldn’t be able to breathe up in the mesosphere. But there is more gas in this layer than there is out in the thermosphere. Have you ever seen a meteor shower, where meteors burn up and streak
+                        across the sky? Some people call them shooting stars. Those meteors are burning up in the mesosphere. The meteors make it through the exosphere and thermosphere without much trouble because those layers don’t have much air. But
+                        when they hit the mesosphere, there are enough gases to cause friction and create heat.
+                    </p>
+                </div>
+                <div class="starsContainer">
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="sshooting_star"></div>
+                    <div class="shooting_star"></div>
+                </div>
+            </div>
+        </div>
+        <div id="stratosphere" class="stratosphere">
+            <h2 id="stratosphereHeading">Stratosphere</h2>
+
+            <img class="tooltip ballon" title="Air ballon" src="images/air-hot-balloon.png">
+
+            <img id="jet" class="tooltip jet" title="Jet" src="images/jet.png">
+
+            <div id="stratosphereSky" class="stratosphereSky">
+                <div class="wrap">
+                    <p class="troposphereParagraph">
+
+                        The mesosphere lies between the thermosphere and the stratosphere. “Meso” means middle, and this is the highest layer of the atmosphere in which the gases are all mixed up rather than being layered by their mass. The mesosphere is 22 miles (35 kilometers)
+                        thick. The air is still thin, so you wouldn’t be able to breathe up in the mesosphere. But there is more gas in this layer than there is out in the thermosphere. Have you ever seen a meteor shower, where meteors burn up and streak
+                        across the sky? Some people call them shooting stars. Those meteors are burning up in the mesosphere. The meteors make it through the exosphere and thermosphere without much trouble because those layers don’t have much air. But
+                        when they hit the mesosphere, there are enough gases to cause friction and create heat.
+                    </p>
+                </div>
+                <img id="jet" class=" jetHover" title="Jet" src="images/jet.png">
+                <img class="ballonHover" src="images/air-hot-balloon.png">
+
+            </div>
+            <div class="tooltip ozon" title="Ozone layer">
+
+            </div>
+            <!-- end of ozon layer -->
+        </div>
+        <div id="troposphere" class="troposphere">
+            <h2 id="troposphereHeading">Troposphere </h2>
+
+            <img class="staticCloud" src="https://www.dl.dropboxusercontent.com/s/31ivp5fsjcgytgp/cloud1.png'">
+            <img class="plane" src="https://www.dl.dropboxusercontent.com/s/5beukq1zg37jlr7/airbus.png">
+
+            <div id="sky" class="sky">
+                <div id="cloud1" class="cloud cloud1"></div>
+                <div id="cloud2" class="cloud cloud2"></div>
+                <div id="cloud3" class="cloud cloud3"></div>
+                <div id="cloud4" class="cloud cloud4"></div>
+                <div id="cloud5" class="cloud cloud5"></div>
+                <div id="cloud6" class="cloud cloud6"></div>
+                <div id="cloud7" class="cloud cloud7"></div>
+                <div id="aeroplane"></div>
+                <div class="wrap">
+                    <p id="text" class="troposphereParagraph">
+
+                        The troposphere is the lowest layer of our atmosphere. Starting at ground level, it extends upward to about 10 km (6.2 miles or about 33,000 feet) above sea level. We humans live in the troposphere, and nearly all weather occurs in this lowest layer.
+                        Most clouds appear here, mainly because 99% of the water vapor in the atmosphere is found in the troposphere. Air pressure drops, and temperatures get colder, as you climb higher in the troposphere.
+                    </p>
+                </div>
+            </div>
+
+            <div class="earth">
+                <div></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
