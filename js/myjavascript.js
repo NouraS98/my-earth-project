@@ -1,15 +1,71 @@
+function troposphereClicked() {
+    $("#troposphere").animate({
+        height: '55%'
+    }, "slow");
+    $("#troposphere").addClass("troposphereHover");
+    document.getElementById("sky").style.display = "block";
+
+}
+
+function stratosphereClicked() {
+
+    $("#stratosphere").animate({
+        height: '75%',
+    }, "slow");
+    $("#stratosphere").addClass("stratosphereHover");
+    document.getElementById("stratosphereSky").style.display = "block";
+
+
+}
+
+function mesosphereClicked() {
+    $("#mesosphere").animate({
+        height: '88%',
+    }, "slow");
+
+    $("#mesosphere").addClass("mesosphereHover");
+    document.getElementById("mesosphereSky").style.display = "block";
+
+}
+
+function thermosphereClicked() {
+    $("#thermosphere").animate({
+        height: '100%',
+    }, "slow");
+
+    $("#thermosphere").addClass("thermosphereHover");
+    document.getElementById("thermosphereSky").style.display = "block";
+
+}
+
+function exosphereClicked() {
+    $("#exosphere").animate({
+        height: '105%',
+    }, "slow");
+
+    $("#exosphere").addClass("exosphereHover");
+    document.getElementById("exosphereSky").style.display = "block";
+    // for (var i = 0; i < 50; i++) {
+    //     var star = '<div class="star" style="animation: twinkle ' +
+    //         ((Math.random() * 1) + 5) + 's linear ' + ((Math.random() * 5) + 5) +
+    //         's infinite; top: ' + Math.random() * $(window).height() + 'px; left: ' +
+    //         Math.random() * $(window).width() + 'px;"></div>';
+    //     $('#exosphereSky').append(star);
+    // }
+
+}
+
+
 $(document).ready(function() {
+
+
+    $('.tooltip').tooltipster();
+
 
     // -------------- when hover on troposphere-----------
     $("#troposphereHeading").mouseenter(function() {
-        $("#troposphere").animate({
-            height: '55%'
-        }, "slow");
-        $("#troposphere").addClass("troposphereHover");
-        document.getElementById("sky").style.display = "block";
-
+        troposphereClicked();
     });
-
     $("#troposphere").mouseleave(function() {
         $(".troposphere").animate({
             height: '550px'
@@ -22,13 +78,7 @@ $(document).ready(function() {
 
     // ---------- when hover on stratosphere ------------
     $("#stratosphereHeading").mouseenter(function() {
-
-        $("#stratosphere").animate({
-            height: '75%',
-        }, "slow");
-        $("#stratosphere").addClass("stratosphereHover");
-        document.getElementById("stratosphereSky").style.display = "block";
-
+        stratosphereClicked();
 
     });
 
@@ -46,15 +96,7 @@ $(document).ready(function() {
     // ---------- when hover on mesosphere ------------
     $("#mesosphereHeading").mouseenter(function() {
 
-        $("#mesosphere").animate({
-            height: '88%',
-        }, "slow");
-
-        $("#mesosphere").addClass("mesosphereHover");
-        document.getElementById("mesosphereSky").style.display = "block";
-
-
-
+        mesosphereClicked();
     });
 
     $("#mesosphere").mouseleave(function() {
@@ -71,15 +113,7 @@ $(document).ready(function() {
 
     // ---------- when hover on thermosphere ------------
     $("#thermosphereHeading").mouseenter(function() {
-
-        $("#thermosphere").animate({
-            height: '100%',
-        }, "slow");
-
-        $("#thermosphere").addClass("thermosphereHover");
-        // document.getElementById("mesosphereSky").style.display = "block";
-
-
+        thermosphereClicked();
 
     });
 
@@ -88,31 +122,17 @@ $(document).ready(function() {
             height: '1200px',
 
         }, "slow");
-        // document.getElementById("mesosphereSky").style.display = "none";
 
         $("#thermosphere").removeClass("thermosphereHover");
         $("#thermosphere").addClass("thermosphere");
+        document.getElementById("thermosphereSky").style.display = "none";
 
     });
     // ---------- when hover on exosphere ------------
 
     $("#exosphereHeading").mouseenter(function() {
 
-        $("#exosphere").animate({
-            height: '105%',
-        }, "slow");
-
-        $("#exosphere").addClass("exosphereHover");
-        document.getElementById("exosphereSky").style.display = "block";
-        // for (var i = 0; i < 50; i++) {
-        //     var star = '<div class="star" style="animation: twinkle ' +
-        //         ((Math.random() * 1) + 5) + 's linear ' + ((Math.random() * 5) + 5) +
-        //         's infinite; top: ' + Math.random() * $(window).height() + 'px; left: ' +
-        //         Math.random() * $(window).width() + 'px;"></div>';
-        //     $('#exosphereSky').append(star);
-        // }
-
-
+        exosphereClicked();
 
     });
 
@@ -142,5 +162,6 @@ $(document).ready(function() {
     for (let i = 0; i < length; i++) {
         text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
     }
+
 
 }); //end of document.ready

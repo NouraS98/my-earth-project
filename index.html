@@ -4,19 +4,16 @@
 <head>
     <link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
 
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
     <script>
-        $(document).ready(function() {
-            $('.tooltip').tooltipster();
-        });
     </script>
-    <script type="text/javascript" src="js/myjavascript.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/myjavascript.js"></script>
 
 </head>
 
@@ -32,37 +29,38 @@
                 </a>
                 <a class="menu-button icon-minus" href="#0" title="Hide navigation"> <img class="sun" src='images/sun.png'></a>
                 <li class="menu-item">
-                    <a href="#menu">
-                        <span class="fa fa-github">1</span>
+                    <a href="#container" onclick="mesosphereClicked()">
+                        <span>Mesosphere</span>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#menu">
-                        <span>2</span>
+                    <a href="#container" onclick="thermosphereClicked()">
+                        <span>Thermosphere</span>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#menu">
-                        <span class="fa fa-instagram">3</span>
+                    <a href="#thermosphere" onclick="stratosphereClicked()">
+                        <span>Stratosphere</span>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#menu">
-                        <span class="fa fa-twitter">4</span>
+                    <a href="#mesosphere" onclick="troposphereClicked()">
+                        <span>Troposphere</span>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#menu">
-                        <span class="fa fa-twitter">5</span>
+                    <a href="#" onclick="exosphereClicked()">
+                        <span>Exosphere</span>
                     </a>
                 </li>
             </ul>
 
         </div>
-
+        <script>
+        </script>
     </header>
 
-    <div class="container">
+    <div id="container" class="container">
         <div class="emptyLayer">
 
         </div>
@@ -71,7 +69,15 @@
             <img class="tooltip starsIcon " title="Stars" src="images/stars.png">
             <div class="exoWrap">
                 <div class="exosphereSky" id="exosphereSky">
-
+                    <div>
+                        <p id="exosphereParagraph" class="exosphereParagraph">
+                            The exosphere is the outermost layer of our atmosphere. “Exo” means outside and is the same prefix used to describe insects like grasshoppers that have a hard shell or “exoskeleton” on the outside of their body. <br> <br> The
+                            exosphere is the very edge of our atmosphere. This layer separates the rest of the atmosphere from outer space. It’s about 6,200 miles (10,000 kilometers) thick. That’s almost as wide as Earth itself. The exosphere is really,
+                            really big. That means that to get to outer space, you have to be really far from Earth. <br><br>The exosphere has gases like hydrogen and helium, but they are very spread out. There is a lot of empty space in between. There
+                            is no air to breathe, and it’s very cold.
+                        </p>
+                        <img class="tooltip cometHover" title="Star" src="images/stars.png">
+                    </div>
 
                 </div>
             </div>
@@ -79,7 +85,19 @@
         <div id="thermosphere" class="thermosphere">
             <h2 id="thermosphereHeading">Thermosphere</h2>
             <img class="tooltip comet" title="Satellite" src="images/satellite.png">
+            <div id="thermosphereSky" class="thermosphereSky">
+                <div>
 
+                    <p id="thermoParagraph" class="thermoParagraph">
+                        The thermosphere lies between the exosphere and the mesosphere. “Thermo” means heat, and the temperature in this layer can reach up to 4,500 degrees Fahrenheit. If you were to hang out in the thermosphere, though, you would be very cold because there
+                        aren’t enough gas molecules to transfer the heat to you. This also means there aren’t enough molecules for sound waves to travel through. <br><br> This layer of Earth’s atmosphere is about 319 miles (513
+                        kilometers) thick. That’s much thicker than the inner layers of the atmosphere, but not nearly as thick as the exosphere. The thermosphere is home to the International Space Station as it orbits Earth. This is also where you’ll
+                        find low Earth orbit satellites. There’s a lot going on in the thermosphere
+                    </p>
+                    <img class="tooltip cometHover" title="Satellite" src="images/satellite.png">
+
+                </div>
+            </div>
         </div>
         <div id="mesosphere" class="mesosphere">
             <h2 id="mesosphereHeading">Mesosphere</h2>
@@ -87,10 +105,10 @@
             <div id="mesosphereSky" class="mesosphereSky">
                 <div class="parContainer">
                     <p class="mesosphereParagraph">
-                        The mesosphere lies between the thermosphere and the stratosphere. “Meso” means middle, and this is the highest layer of the atmosphere in which the gases are all mixed up rather than being layered by their mass. The mesosphere is 22 miles (35 kilometers)
-                        thick. The air is still thin, so you wouldn’t be able to breathe up in the mesosphere. But there is more gas in this layer than there is out in the thermosphere. Have you ever seen a meteor shower, where meteors burn up and streak
-                        across the sky? Some people call them shooting stars. Those meteors are burning up in the mesosphere. The meteors make it through the exosphere and thermosphere without much trouble because those layers don’t have much air. But
-                        when they hit the mesosphere, there are enough gases to cause friction and create heat.
+                        The mesosphere lies between the thermosphere and the stratosphere. “Meso” means middle, and this is the highest layer of the atmosphere in which the gases are all mixed up rather than being layered by their mass. <br><br> The mesosphere
+                        is 22 miles (35 kilometers) thick. The air is still thin, so you wouldn’t be able to breathe up in the mesosphere. But there is more gas in this layer than there is out in the thermosphere. Have you ever seen a meteor shower, where
+                        meteors burn up and streak across the sky? Some people call them shooting stars. Those meteors are burning up in the mesosphere. <br> <br> The meteors make it through the exosphere and thermosphere without much trouble because
+                        those layers don’t have much air. But when they hit the mesosphere, there are enough gases to cause friction and create heat.
                     </p>
                 </div>
                 <div class="starsContainer">
@@ -106,8 +124,9 @@
                     <div class="shooting_star"></div>
                 </div>
             </div>
+
         </div>
-        <div id="stratosphere" class="stratosphere">
+        <div name="Stratosphere" id="stratosphere" class="stratosphere">
             <h2 id="stratosphereHeading">Stratosphere</h2>
 
             <img class="tooltip ballon" title="Air ballon" src="images/air-hot-balloon.png">
@@ -118,14 +137,15 @@
                 <div class="wrap">
                     <p class="troposphereParagraph">
 
-                        The mesosphere lies between the thermosphere and the stratosphere. “Meso” means middle, and this is the highest layer of the atmosphere in which the gases are all mixed up rather than being layered by their mass. The mesosphere is 22 miles (35 kilometers)
-                        thick. The air is still thin, so you wouldn’t be able to breathe up in the mesosphere. But there is more gas in this layer than there is out in the thermosphere. Have you ever seen a meteor shower, where meteors burn up and streak
-                        across the sky? Some people call them shooting stars. Those meteors are burning up in the mesosphere. The meteors make it through the exosphere and thermosphere without much trouble because those layers don’t have much air. But
-                        when they hit the mesosphere, there are enough gases to cause friction and create heat.
+                        The stratosphere. “Strat” means layer. This layer of our atmosphere has its own set of layers. There are no storms or turbulence here to mix up the air, so cold, heavy air is at the bottom and warm, light air is at the top. That’s the opposite of how
+                        the layers work in the troposphere, where we live. If you were to climb a mountain in the stratosphere you would have to take off your warm clothes as you got closer to the top rather than putting them on like we usually do. But
+                        there are no mountains high enough to reach the stratosphere, so you don’t have to worry about that. <br><br> This layer is 22 miles (35 kilometers) thick. The stratosphere is where you’ll find the very
+                        important ozone layer. The ozone layer helps protect us from ultraviolet radiation (UV) from the sun. In fact, the ozone layer absorbs most of the UV radiation the sun sends to us. Life as we know it wouldn’t be possible without
+                        this layer of protection.
                     </p>
                 </div>
                 <img id="jet" class=" jetHover" title="Jet" src="images/jet.png">
-                <img class="ballonHover" src="images/air-hot-balloon.png">
+                <img class=" tooltip ballonHover" title="ballon" src="images/air-hot-balloon.png">
 
             </div>
             <div class="tooltip ozon" title="Ozone layer">
@@ -149,10 +169,14 @@
                 <div id="cloud7" class="cloud cloud7"></div>
                 <div id="aeroplane"></div>
                 <div class="wrap">
-                    <p id="text" class="troposphereParagraph">
+                    <p class="troposphereParagraph">
+                        The layer we call home <br><br> Closest to the surface of Earth, we have the troposphere. Tropos means change. This layer gets its name from the weather that is constantly changing and mixing up the gases in this part of our atmosphere.
+                        The troposphere is between 5 and 9 miles (8 and 14 kilometers) thick depending on where you are on Earth. It’s thinnest at the North and South Pole.
 
-                        The troposphere is the lowest layer of our atmosphere. Starting at ground level, it extends upward to about 10 km (6.2 miles or about 33,000 feet) above sea level. We humans live in the troposphere, and nearly all weather occurs in this lowest layer.
-                        Most clouds appear here, mainly because 99% of the water vapor in the atmosphere is found in the troposphere. Air pressure drops, and temperatures get colder, as you climb higher in the troposphere.
+                        <br><br> This layer has the air we breathe and the clouds in the sky. The air is densest in this lowest layer.
+                        <br><br> When you feel the wind on your face, see clouds in the sky, and watch a bird flap its wings in flight, you’re experiencing the troposphere. It’s a pretty nice layer to call home.
+
+
                     </p>
                 </div>
             </div>
