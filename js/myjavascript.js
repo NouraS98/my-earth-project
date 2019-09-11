@@ -115,10 +115,10 @@ $(document).ready(function() {
             height: '1200px',
 
         }, "slow");
+        document.getElementById("thermosphereSky").style.display = "none";
 
         $("#thermosphere").removeClass("thermosphereHover");
         $("#thermosphere").addClass("thermosphere");
-        document.getElementById("thermosphereSky").style.display = "none";
 
     });
     // ---------- when hover on exosphere ------------
